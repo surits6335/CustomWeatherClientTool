@@ -40,7 +40,7 @@ namespace CustomWeatherClientTool.UnitTests
             var result = await weatherService.GetWeatherDetails(coOrdinate);
 
             //assert
-            Assert.Equal(true, result.IsAccurate);
+            Assert.True(result.IsAccurate);
 
             handlerMock.Protected().Verify(
               "SendAsync",
@@ -79,7 +79,7 @@ namespace CustomWeatherClientTool.UnitTests
             var result = await weatherService.GetWeatherDetails(coOrdinate);
 
             //assert
-            Assert.Equal(false, result.IsAccurate);
+            Assert.False(result.IsAccurate);
 
             handlerMock.Protected().Verify(
               "SendAsync",
