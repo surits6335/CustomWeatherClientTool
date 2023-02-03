@@ -6,7 +6,7 @@ public class Program
     static async Task Main(string[] args)
     {
         var locationService = new LocationService();
-        var weatherService = new WeatherService();
+        var weatherService = new WeatherService(new HttpClient());
         var coordinate = await locationService.GetCoOrdinates(args[0]);
         var weather = await weatherService.GetWeatherDetails(coordinate);
 
