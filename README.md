@@ -1,4 +1,4 @@
-# Build the application
+# Building the application
 To build the application follow the below instructions,
 1. Make sure ".NET 6.0 SDK" is installed in the system.
 2. Open command prompt and navigate to the project folder where "CustomWeatherClientTool.csproj" file exists i.e. `<Folder path where the repository is cloned>\CustomWeatherClientTool\CustomWeatherClientTool`.
