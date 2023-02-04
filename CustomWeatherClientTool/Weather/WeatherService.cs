@@ -1,7 +1,6 @@
 ﻿using CustomWeatherClientTool.Location;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Net.Http;
 
 namespace CustomWeatherClientTool.Weather
 {
@@ -19,7 +18,7 @@ namespace CustomWeatherClientTool.Weather
             var currentWeather = new Weather();
             try
             {
-                if (coOrdinate != null)
+                if (coOrdinate != null && coOrdinate.Lat != null && coOrdinate.Lng != null)
                 {
                     var url = $"https://api.open-meteo.com/v1/forecast?latitude={coOrdinate.Lat}&longitude={coOrdinate.Lng}&current_weather=true";
 

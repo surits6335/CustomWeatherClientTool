@@ -5,9 +5,10 @@ public class Program
 {
     static async Task Main(string[] args)
     {
+        var cityName = string.Join(" ", args);
         var locationService = new LocationService();
         var weatherService = new WeatherService(new HttpClient());
-        var coordinate = await locationService.GetCoOrdinates(args[0]);
+        var coordinate = await locationService.GetCoOrdinates(cityName);
         var weather = await weatherService.GetWeatherDetails(coordinate);
 
         if (coordinate != null && weather.IsAccurate)

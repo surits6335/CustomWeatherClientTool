@@ -10,6 +10,7 @@ namespace CustomWeatherClientTool.UnitTests
         [Fact]
         public async Task TestGetWeather_With_Accurate_Data()
         {
+            //arrange
             var coOrdinate = new CoOrdinate
             {
                 City = "Kolkata",
@@ -52,6 +53,7 @@ namespace CustomWeatherClientTool.UnitTests
         [Fact]
         public async Task TestGetWeather_With_Errorneous_Data()
         {
+            //arrange
             var coOrdinate = new CoOrdinate
             {
                 City = "Kolkata",
